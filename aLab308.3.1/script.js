@@ -1,12 +1,13 @@
 // Importing database functions. DO NOT MODIFY THIS LINE.
 import { central, db1, db2, db3, vault } from "./databases.js";
+//async Group Result.
 
-// async function getUserData(id) {
-//   const dbs = {
-//     db1: db1,
-//     db2: db2,
-//     db3: db3,
-//   };
+async function getUserData(id) {
+  const dbs = {
+    db1: db1,
+    db2: db2,
+    db3: db3,
+  };
 
 //   const resultCentral = await central(id);
 //   const returnedValue = await dbs[resultCentral](id);
@@ -15,6 +16,36 @@ import { central, db1, db2, db3, vault } from "./databases.js";
 //   console.log(returnedValue);
 //   console.log(v);
 // }
+
+  
+  
+  
+  
+  
+  //Async Going over with Oussama
+  
+  // promise- Something that start now and finishes later
+
+  // try catch- for the code not to break even if there is an error 
+
+  //1st way
+  // central(id)
+  //   .then((valueReturnedFromCentral) => {
+  //   console.log(data)
+  //   })
+  
+  // first request to get database name.
+
+//2nd request to dbs database and invoke and then you pass the idea.
+
+const database = await central(id);
+const data = await dbs[database](id)
+console.log(data)
+console.log((date.now() - time) / 1000)
+}
+
+getUserData(2)
+//.Then.catch Group Result.
 
 // function getUserData(id) {
 //   const dbs = {
